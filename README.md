@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/29737817/README.md)
 # Flask 用户管理登录系统
 
 一个基于 Python Flask 的简易用户信息管理平台，演示了登录、登出、用户信息展示等基础功能，并实现了 **RSA 非对称加密** 对登录密码进行加密传输。
