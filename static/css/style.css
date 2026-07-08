@@ -181,3 +181,57 @@ ul {
     color: #555;
     margin-right: 8px;
 }
+
+/* ===== Success Message ===== */
+.success-msg {
+    background: #f6ffed;
+    border: 1px solid #b7eb8f;
+    color: #389e0d;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+/* ===== Data Table (搜索) ===== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.data-table th {
+    background: #667eea;
+    color: #fff;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.data-table th:first-child {
+    border-radius: 6px 0 0 0;
+}
+
+.data-table th:last-child {
+    border-radius: 0 6px 0 0;
+}
+
+.data-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+.data-table tr:hover td {
+    background: #f8f9ff;
+}
+
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== Search Form ===== */
+.search-form {
+    margin-bottom: 4px;
+}

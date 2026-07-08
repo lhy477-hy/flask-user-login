@@ -13,6 +13,44 @@
         </ul>
         <a href="/logout" class="btn btn-primary">退出登录</a>
     </div>
+
+    <!-- 搜索功能 -->
+    <div class="card" style="margin-top:20px;">
+        <h2 class="card-title">搜索用户</h2>
+        <form method="get" action="/" class="search-form">
+            <div class="form-group" style="display:flex; gap:10px;">
+                <input type="text" name="keyword" placeholder="输入用户名或邮箱关键词" value="{{ keyword }}" style="flex:1;">
+                <button type="submit" class="btn btn-primary">搜索</button>
+            </div>
+        </form>
+
+        {% if keyword %}
+            {% if search_results and search_results|length > 0 %}
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>用户名</th>
+                            <th>邮箱</th>
+                            <th>手机</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in search_results %}
+                        <tr>
+                            <td>{{ row[0] }}</td>
+                            <td>{{ row[1] }}</td>
+                            <td>{{ row[2] }}</td>
+                            <td>{{ row[3] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p class="text-muted">无搜索结果</p>
+            {% endif %}
+        {% endif %}
+    </div>
 {% else %}
     <div class="card">
         <h2 class="card-title">请先登录</h2>
