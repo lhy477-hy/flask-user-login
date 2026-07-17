@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2 class="card-title">Ping 网络诊断</h2>
+    <p class="text-muted">输入 IP 地址或域名进行 Ping 测试</p>
+
+    <form method="POST" action="/ping" class="search-form">
+        <div class="form-group" style="display:flex; gap:10px;">
+            <input type="text" name="ip" placeholder="输入 IP 地址或域名（如 8.8.8.8）" value="{{ ip }}" style="flex:1;" required>
+            <button type="submit" class="btn btn-primary">Ping</button>
+        </div>
+    </form>
+
+    {% if result %}
+        <h3 style="margin: 20px 0 10px; color: #555;">执行结果：</h3>
+        <pre style="background:#1e1e1e; color:#00ff00; padding:15px; border-radius:6px; font-family:'Courier New',monospace; font-size:13px; line-height:1.5; max-height:500px; overflow:auto; white-space:pre-wrap; word-wrap:break-word;">{{ result }}</pre>
+    {% elif error %}
+        <h3 style="margin: 20px 0 10px; color: #555;">错误输出：</h3>
+        <pre style="background:#1e1e1e; color:#ff4444; padding:15px; border-radius:6px; font-family:'Courier New',monospace; font-size:13px; line-height:1.5; max-height:500px; overflow:auto; white-space:pre-wrap; word-wrap:break-word;">{{ error }}</pre>
+    {% endif %}
+
+    <div style="margin-top: 20px;">
+        <a href="/" class="btn btn-primary">返回首页</a>
+    </div>
+</div>
+{% endblock %}

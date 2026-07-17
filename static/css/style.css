@@ -1,0 +1,237 @@
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    height: 56px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.brand {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-welcome {
+    font-size: 14px;
+    opacity: 0.95;
+}
+
+.nav-link {
+    font-size: 14px;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.15);
+    transition: background 0.2s;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== Container ===== */
+.container {
+    max-width: 560px;
+    margin: 48px auto;
+    padding: 0 16px;
+}
+
+/* ===== Card ===== */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+}
+
+.login-card {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.text-muted {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* ===== Form ===== */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+/* ===== Button ===== */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #5a6fd6;
+}
+
+/* ===== Error Message ===== */
+.error-msg {
+    background: #fff1f0;
+    border: 1px solid #ffccc7;
+    color: #cf1322;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+/* ===== Info List ===== */
+.info-list {
+    margin-bottom: 24px;
+}
+
+.info-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
+}
+
+.info-list li:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #555;
+    margin-right: 8px;
+}
+
+/* ===== Success Message ===== */
+.success-msg {
+    background: #f6ffed;
+    border: 1px solid #b7eb8f;
+    color: #389e0d;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+/* ===== Data Table (搜索) ===== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.data-table th {
+    background: #667eea;
+    color: #fff;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.data-table th:first-child {
+    border-radius: 6px 0 0 0;
+}
+
+.data-table th:last-child {
+    border-radius: 0 6px 0 0;
+}
+
+.data-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+.data-table tr:hover td {
+    background: #f8f9ff;
+}
+
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== Search Form ===== */
+.search-form {
+    margin-bottom: 4px;
+}

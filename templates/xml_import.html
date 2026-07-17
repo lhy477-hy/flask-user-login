@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2 class="card-title">XML 数据导入</h2>
+    <p class="text-muted">粘贴 XML 数据，系统将解析并提取用户信息</p>
+
+    <form method="POST" action="/xml-import">
+        <div class="form-group">
+            <textarea name="xml_data" rows="12" placeholder="在此粘贴 XML 数据..." style="width:100%; padding:10px; border:1px solid #ddd; border-radius:6px; font-family:'Courier New',monospace; font-size:13px;" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">导入</button>
+    </form>
+
+    {% if result %}
+        <h3 style="margin: 20px 0 10px; color: #555;">解析结果：</h3>
+        <pre style="background:#f5f5f5; padding:15px; border-radius:6px; border:1px solid #ddd; font-family:'Courier New',monospace; font-size:13px; max-height:500px; overflow:auto;">{{ result }}</pre>
+    {% elif error %}
+        <h3 style="margin: 20px 0 10px; color: #555;">错误：</h3>
+        <pre style="background:#fff0f0; color:#c0392b; padding:15px; border-radius:6px; border:1px solid #e0b4b4; font-family:'Courier New',monospace; font-size:13px;">{{ error }}</pre>
+    {% endif %}
+
+    <div style="margin-top: 20px;">
+        <a href="/" class="btn btn-primary">返回首页</a>
+    </div>
+</div>
+{% endblock %}
